@@ -11,8 +11,14 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
+// data is referring to the inquirer Response, and title is the key from the key:value pair in my questions
+
+
 function generateMarkdown(data) {
+// call the other functions to format the data in a string and return the full string we want to write to the file
+
   return `# ${data.title}
+  
 
 `;
 }
