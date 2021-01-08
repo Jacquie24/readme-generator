@@ -53,16 +53,21 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-  // var dataHere = generateMarkdown(data)
-  fs.writeToFile(fileName, dataHere);
+function writeFile(fileName, data) {
+  
+  fs.writeFile(fileName, generateMarkdown(data), (err) =>
+    err ? console.error(err) : console.log("Success!")
+  );
 }
 
 // TODO: Create a function to initialize app
 function init() {
-  // inquirer.prompt(questions) = using questions we define on 4
-  // .then(response) =>
-  // writeToFile("readMe.md", response)
+  inquirer.prompt(questions).then((response) => {
+    console.log(response);
+    // The generateReadme.md is calling the fileName parameter in the functon above.
+    // response is the promise parameter from the .then.
+    writeFile("generateReadme.md", response);
+  });
 }
 
 // Function call to initialize app
