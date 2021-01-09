@@ -1,23 +1,81 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (license === "MIT") {
+    return `![](https://img.shields.io/ba[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)dge/license-MIT-yellowgreen) [MIT]("https://choosealicense.com/licenses/mit/")`;
+  } else if (license === "ISC") {
+    return `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC) [ISC]("https://choosealicense.com/licenses/isc/")`
+  } else if (license === "GNU GPLv3") {
+    return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [GNU GPLv3]("https://choosealicense.com/licenses/gpl-3.0/")`
+  } else if (license === "none") {
+    return "";
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license === "none") {
+    return "";
+  } else {
+    return `- [License](#license)`
+  }
+  }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license === "none") {
+    return "";
+  } else {
+    return `### License
+  This page uses the ${license} license.`;
+  }
+}
 
 // TODO: Create a function to generate markdown for README
-// data is referring to the inquirer Response, and title is the key from the key:value pair in my questions
-
 
 function generateMarkdown(data) {
-// call the other functions to format the data in a string and return the full string we want to write to the file
+  // call the other functions to format the data in a string and return the full string we want to write to the file
 
+  // return `# ${data.title}
   return `# ${data.title}
+
+  ${renderLicenseBadge(data.license)}
+  
+  ## Table of Contents
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+  ${renderLicenseLink(data.license)}
+
+  ### Description
+  ${data.description}
+  
+  ### Installation
+  ${data.install}
+  
+  ### Usage
+  ${data.usage}
+  
+  ### Contributing
+  ${data.contribute}
+  
+  ### Tests
+  ${data.testing}
+  
+  ### Questions
+  For questions, please check out my [GitHub]("https://github.com/${
+    data.gitHubName
+  }") page first.  If you have any further questions, you can email me directly at ${
+    data.email
+  }.
+  
+  ${renderLicenseSection(data.license)}
+
   
 
 `;
