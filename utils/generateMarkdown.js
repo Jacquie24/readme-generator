@@ -34,7 +34,12 @@ function renderLicenseSection(license) {
   } else if (license === "GNU GPLv3") {
     return `### License
   This page uses the [GNU GPLv3]("https://choosealicense.com/licenses/gpl-3.0/") license.`;
-  } else if (license === "none") {
+  } else if (license === "BSD 3-Clause") {
+    return `### License
+  This page uses the [BSD 3-Clause]("https://choosealicense.com/licenses/bsd-3-clause/") license.`;
+  } 
+  
+  else if (license === "none") {
     return "";
   }
 }
