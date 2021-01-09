@@ -29,19 +29,17 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if (license === "MIT") {
     return `### License
-  This page uses the [MIT]("https://choosealicense.com/licenses/mit/") license.`;
+  This page uses the [MIT](https://choosealicense.com/licenses/mit/) license.`;
   } else if (license === "ISC") {
     return `### License
-  This page uses the [ISC]("https://choosealicense.com/licenses/isc/") license.`;
+  This page uses the [ISC](https://choosealicense.com/licenses/isc/) license.`;
   } else if (license === "GNU GPLv3") {
     return `### License
-  This page uses the [GNU GPLv3]("https://choosealicense.com/licenses/gpl-3.0/") license.`;
+  This page uses the [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/) license.`;
   } else if (license === "BSD 3-Clause") {
     return `### License
-  This page uses the [BSD 3-Clause]("https://choosealicense.com/licenses/bsd-3-clause/") license.`;
-  } 
-  
-  else if (license === "none") {
+  This page uses the [BSD 3-Clause](https://choosealicense.com/licenses/bsd-3-clause/) license.`;
+  } else if (license === "none") {
     return "";
   }
 }
@@ -81,9 +79,9 @@ function generateMarkdown(data) {
   ${data.testing}
   
   ### Questions
-  For questions, please check out my [GitHub]("https://github.com/${
+  For questions, please check out my [GitHub](https://github.com/${
     data.gitHubName
-  }") page first.  If you have any further questions, you can email me directly at ${
+  }) page first.  If you have any further questions, you can email me directly at ${
     data.email
   }.
   
