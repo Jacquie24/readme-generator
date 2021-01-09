@@ -7,6 +7,7 @@
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contributing](#contributing)
+  - [Tests](#tests)
   - [Questions](#questions)
   - [License](#license)
 
@@ -21,6 +22,9 @@
   
   ### Contributing
   If you'd like to contribute -- ideas for new headings, additional licenses, etc. -- please add your comments below, and I may include them in future updates.
+  
+  ### Tests
+  No testing procedures
   
   ### Questions
   For questions, please check out my [GitHub]("https://github.com/jacquie24") page first.  If you have any further questions, you can email me directly at jgcaption@yahoo.com.
